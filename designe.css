@@ -17,13 +17,15 @@ body {
 .text {
     color: white;
     text-align: center;
-    font-size: 20px;
+    font-size: clamp(16px, 2.5vw, 22px);
+    line-height: 1.6;
+    padding: 0 10px;
 }
 
 .hero-banner-container {
     width: 100% !important;
     max-width: 100% !important;        
-    margin: 0 0 20px 0 !important;       
+    margin: 0 auto 20px auto !important;       
     border-radius: 0 !important;     
     overflow: hidden;        
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); 
@@ -32,9 +34,14 @@ body {
 .hero-banner-img {
     width: 100% !important;
     height: auto;
-    max-height: 400px;        
+    max-height: 450px;        
     object-fit: cover;      
     display: block;
+    transition: transform 0.4s ease;
+}
+
+.hero-banner-container:hover .hero-banner-img {
+    transform: scale(1.03);
 }
 
 fieldset {
@@ -90,6 +97,14 @@ legend {
     width: 100%;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.buttons-flex-container button:hover {
+    transform: translateY(-4px);
+    border-color: #f3d06c; 
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3); 
+    background: linear-gradient(135deg, rgba(18, 37, 63, 1), rgba(35, 60, 98, 1));
 }
 
 .buttons-flex-container button img {
@@ -102,11 +117,12 @@ legend {
 
 .buttons-flex-container button .text {
     color: #ffffff;
-    font-size: 14px;
+    font-size: clamp(13px, 2vw, 16px);
     font-weight: bold;
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
+    width: 100%;
 }
 
 img {
