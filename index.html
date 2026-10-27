@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AL-QAA Municipality</title>
+    <link rel="stylesheet" href="designe.css">
+    <meta charset="UTF8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <script src="app.js" defer></script>
+    <!-- PWA Primary Manifest & Theme -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1c2541">
+
+<!-- iOS Safari Support -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="القاع">
+<link rel="apple-touch-icon" href="images/icon-192.png">
+</head>
+<body dir="rtl">
+    <div class="hero-banner-container">
+        <img src="bg.jpg" alt="hona l qaa" class="hero-banner-img">
+    </div>
+    <div class="text">
+        <br>
+   <p><pre>أهلاً بكم في القاع.. بلدة الأصالة والصمود في قلب البقاع الشمالي.
+
+أهلاً بكم في أرض الكرم والشهداء، الأرض التي واجهت وتحدّت الإرهاب وظلّت شامخة.
+
+هنا ولدنا، وهنا صمدنا أمام التفجيرات الإرهابية..
+
+هنا رممنا بيوتنا، هنا زرعنا وهنا حصدنا، هنا أكلنا وهنا تعلمنا، هنا حلمنا..
+
+وهنا حيث تُسلّم الأجيال الأمانة جيلًا بعد جيل، ليبقى شباب القاع يحمونها يداً بيد..
+
+وهنا سنبقى.. هنا القاع.</pre></p>
+    <br>
+<fieldset>
+    <legend>الخدمات السريعة</legend>   
+    <div class="buttons-flex-container">
+       <button onclick="window.location.href='news.html'">
+        <img src="news.png" > <div class="text">الاخبار</div>
+       </button>
+        <button onclick="window.location.href='activity.html'">
+        <img src="activity.png"><div class="text">نشاطات</div>
+       </button>
+      
+        <button onclick="window.location.href='ads.html'">
+        <img src="ads.png"><div class="text">اعلانات</div>
+       </button>
+        <button onclick="window.location.href='comment.html'">
+        <img src="alert.png"><div class="text">شكاوى</div>
+       </button>
+    </div>
+</fieldset>
+<button id="pwa-install-btn" style="display: none; background: #c5a059; color: #0a1128; border: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; cursor: pointer; margin: 10px auto;">
+  📱 تثبيت تطبيق القاع
+</button>
+</body>
+    

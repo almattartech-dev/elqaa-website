@@ -1,0 +1,22 @@
+{
+  "name": "موقع القاع الرسمي - Al-Qaa",
+  "short_name": "القاع",
+  "description": "منصة بلدة القاع الرسمية للأخبار والتراث",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0a1128",
+  "theme_color": "#1c2541",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

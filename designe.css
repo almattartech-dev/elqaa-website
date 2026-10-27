@@ -1,0 +1,85 @@
+button {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+}
+button img {
+    width:300px;
+    height: 300px;
+}
+body {
+    background: linear-gradient(135deg, #091527 0%, #12253f 50%, #07101e 100%);
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.text {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+.hero-banner-container {
+    width: 100%;
+    max-width: 1200px;        
+    margin: 20px auto;       
+    border-radius: 16px;     
+    overflow: hidden;        
+    box-shadow: 0 8px px rgba(0, 0, 0, 0.4); 
+}
+.hero-banner-img {
+    width: 100%;
+    height: auto;
+    max-height: 450px;        
+    object-fit: cover;      
+    display: block;
+    transition: transform 0.3s ease;
+}
+.hero-banner-container:hover .hero-banner-img {
+    transform: scale(1.10);
+}
+.buttons-flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+.buttons-flex-container button {
+    background: linear-gradient(135deg, rgba(11, 25, 44, 0.95), rgba(26, 45, 75, 0.95)); 
+    border: 1.5px solid #D4AF37; 
+    border-radius: 16px;
+    padding: 18px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    min-width: 150px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    outline: none;
+}
+.buttons-flex-container button:hover {
+    transform: translateY(-5px);
+    border-color: #f3d06c; 
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3); 
+    background: linear-gradient(135deg, rgba(18, 37, 63, 1), rgba(35, 60, 98, 1));
+}
+
+.buttons-flex-container button img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
+}
+.buttons-flex-container button .text {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5px;
+}

@@ -1,0 +1,39 @@
+body{
+    background-color: #1b365d;
+}
+button {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+}
+button img {
+    width:100px;
+    height: 100px;
+}
+.news-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.news-btn img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    object-fit: contain;
+}
+
+.menu-item {
+    display: flex;            
+    align-items: center;      
+    gap: 20px;                
+    margin-bottom: 25px;    
+    direction: rtl;           
+}
+
+
