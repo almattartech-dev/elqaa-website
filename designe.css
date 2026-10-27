@@ -42,27 +42,44 @@ body {
 }
 .buttons-flex-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
+    flex-direction: row;
     flex-wrap: wrap;
-    padding: 20px 0;
+    justify-content: center;
+    align-items: stretch;
+    gap: 15px;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
 }
+
+.buttons-flex-container .service-card {
+    width: 46% !important;
+    max-width: 280px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    display: flex;
+}
+
 .buttons-flex-container button {
     background: linear-gradient(135deg, rgba(11, 25, 44, 0.95), rgba(26, 45, 75, 0.95)); 
     border: 1.5px solid #D4AF37; 
     border-radius: 16px;
-    padding: 18px 22px;
+    padding: 15px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    justify-content: center;
+    gap: 10px;
     cursor: pointer;
-    min-width: 150px;
+    width: 100% !important; 
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     transition: all 0.3s ease;
     outline: none;
+    box-sizing: border-box;
 }
+
 .buttons-flex-container button:hover {
     transform: translateY(-5px);
     border-color: #f3d06c; 
@@ -71,15 +88,17 @@ body {
 }
 
 .buttons-flex-container button img {
-    width: 200px;
-    height: 200px;
+    width: 120px; 
+    height: 120px;
     object-fit: contain;
     filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
 }
+
 .buttons-flex-container button .text {
     color: #ffffff;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: bold;
     font-family: Arial, sans-serif;
     letter-spacing: 0.5px;
+    text-align: center;
 }
