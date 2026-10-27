@@ -28,7 +28,6 @@ body {
     overflow: hidden;        
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); 
 }
-
 .hero-banner-img {
     width: 100%;
     height: auto;
@@ -37,12 +36,9 @@ body {
     display: block;
     transition: transform 0.3s ease;
 }
-
 .hero-banner-container:hover .hero-banner-img {
     transform: scale(1.10);
 }
-
-/* حاوية الأزرار الرئيسية */
 .buttons-flex-container {
     display: flex;
     flex-direction: row;
@@ -56,16 +52,12 @@ body {
     padding: 10px;
     box-sizing: border-box;
 }
-
-/* تنسيق بطاقة الزر لتأخذ نصف السطر بالضبط */
 .buttons-flex-container .service-card {
     width: 46%;
     max-width: 250px;
     box-sizing: border-box;
     margin-bottom: 10px;
 }
-
-/* تنسيق الزر نفسه ليكون متناسقاً ومرتباً */
 .buttons-flex-container button {
     background: linear-gradient(135deg, rgba(11, 25, 44, 0.95), rgba(26, 45, 75, 0.95)); 
     border: 1.5px solid #D4AF37; 
@@ -81,15 +73,12 @@ body {
     transition: all 0.3s ease;
     box-sizing: border-box;
 }
-
 .buttons-flex-container button:hover {
     transform: translateY(-5px);
     border-color: #f3d06c; 
     box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3); 
     background: linear-gradient(135deg, rgba(18, 37, 63, 1), rgba(35, 60, 98, 1));
 }
-
-/* ضبط حجم الأيقونة داخل الزر لكي تتوسطه تماماً */
 .buttons-flex-container button img {
     width: 75px;
     height: 75px;
@@ -98,8 +87,6 @@ body {
     margin: 0 auto;
     filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
 }
-
-/* ضبط النص أسفل الأيقونة داخل الزر */
 .buttons-flex-container button .text {
     color: #ffffff;
     font-size: 15px;
