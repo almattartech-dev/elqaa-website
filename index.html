@@ -88,10 +88,9 @@
 </button>
 
 <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/13.1.0/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+  // Import Firebase SDKs (Unified to v10.12.0)
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 
   // Your web app's Firebase configuration
   const firebaseConfig = {
@@ -105,40 +104,31 @@
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
+  console.log("Firebase initialized successfully");
 
-  if(app){
-    console.log("done");
-  }
-  else{
-    console.log("error");
-  }
+  const auth = getAuth(app);
+  const loginForm = document.getElementById("adminLoginForm");
+  const loginMessage = document.getElementById("loginMessage");
 
-  import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/13.1.8/firebase-auth.js";
+  loginForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    
+    const email = document.getElementById("adminEmail").value;
+    const password = document.getElementById("adminPassword").value;
 
-const auth = getAuth(app);
-
-const loginForm = document.getElementById("adminLoginForm");
-const loginMessage = document.getElementById("loginMessage");
-
-loginForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  
-  const email = document.getElementById("adminEmail").value;
-  const password = document.getElementById("adminPassword").value;
-
-  signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      const user = userCredential.user;
-      console.log("Logged in successfully:", user.email);
-      loginMessage.style.color = "green";
-      loginMessage.textContent = "تم تسجيل الدخول بنجاح!";
-    })
-    .catch((error) => {
-      console.error("Login error:", error.code, error.message);
-      loginMessage.style.color = "red";
-      loginMessage.textContent = "خطأ في البريد أو كلمة المرور";
-    });
-});
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log("Logged in successfully:", user.email);
+        loginMessage.style.color = "green";
+        loginMessage.textContent = "تم تسجيل الدخول بنجاح!";
+      })
+      .catch((error) => {
+        console.error("Login error:", error.code, error.message);
+        loginMessage.style.color = "red";
+        loginMessage.textContent = "خطأ في البريد أو كلمة المرور";
+      });
+  });
 </script>
 </body>
-    
+</html>
