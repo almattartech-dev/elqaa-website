@@ -17,12 +17,14 @@
 <link rel="apple-touch-icon" href="images/icon-192.png">
 </head>
 <body dir="rtl">
-<button id="openLoginBtn" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
-  تسجيل الدخول كمسؤول
+<button onclick="document.getElementById('loginModal').style.display = 'flex'" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
+  تسجيل الدخول 
 </button>
 <div id="loginModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); z-index: 1000; justify-content: center; align-items: center;">
   <div style="background-color: white; padding: 25px; border-radius: 8px; width: 300px; text-align: center; position: relative; color: #333;">
-    <span id="closeLoginBtn" style="position: absolute; top: 10px; left: 15px; cursor: pointer; font-size: 20px; font-weight: bold;">&times;</span>
+    
+    <span onclick="document.getElementById('loginModal').style.display = 'none'" style="position: absolute; top: 10px; left: 15px; cursor: pointer; font-size: 20px; font-weight: bold;">&times;</span>
+    
     <h3 style="margin-bottom: 15px;">دخول المسؤول</h3>
     
     <form id="adminLoginForm" style="display: flex; flex-direction: column; gap: 10px;">
@@ -136,23 +138,6 @@ loginForm.addEventListener("submit", (e) => {
       loginMessage.style.color = "red";
       loginMessage.textContent = "خطأ في البريد أو كلمة المرور";
     });
-});
-const openLoginBtn = document.getElementById("openLoginBtn");
-const closeLoginBtn = document.getElementById("closeLoginBtn");
-const loginModal = document.getElementById("loginModal");
-
-openLoginBtn.addEventListener("click", () => {
-  loginModal.style.display = "flex";
-});
-
-closeLoginBtn.addEventListener("click", () => {
-  loginModal.style.display = "none";
-});
-
-window.addEventListener("click", (e) => {
-  if (e.target === loginModal) {
-    loginModal.style.display = "none";
-  }
 });
 </script>
 </body>
